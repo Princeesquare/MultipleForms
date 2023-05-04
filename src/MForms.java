@@ -7,7 +7,6 @@ public class MForms extends JFrame implements ActionListener {
 
     private final JButton btn1, btn2;
     private final JTextField t1, t2;
-    private final JLabel l1, l2;
 
     public MForms(){
         setSize(320, 130);
@@ -16,8 +15,8 @@ public class MForms extends JFrame implements ActionListener {
         setResizable(false);
 
         //Creating Form Components
-        l1 = new JLabel("Name: ");
-        l2 = new JLabel("Surname: ");
+        JLabel l1 = new JLabel("Name: ");
+        JLabel l2 = new JLabel("Surname: ");
         t1 = new JTextField(20);
         t2 = new JTextField(20);
         btn1 = new JButton("Submit");
@@ -41,8 +40,8 @@ public class MForms extends JFrame implements ActionListener {
             dispose();
 
            MForm2 f2 = new MForm2();
-           f2.L1.setText(t1.getText());
-           f2.L2.setText(t2.getText());
+           f2.setName(t1.getText());
+           f2.setSurname(t2.getText());
         }
         if (e.getSource() == btn2)
         {
